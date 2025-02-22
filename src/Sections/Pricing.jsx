@@ -5,6 +5,7 @@ import { plans } from "../constans/index.jsx";
 
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
+
   return (
     <section>
       <Element name="pricing">
@@ -93,6 +94,35 @@ const Pricing = () => {
                       index === 1 ? "size-[120px]" : "size-[88px]",
                     )}
                   />
+                </div>
+                <div
+                  className={clsx(
+                    "relative flex flex-col items-center",
+                    index === 1 ? "pt-14" : "pt-12",
+                  )}
+                >
+                  <div
+                    className={clsx(
+                      "small-2 rounded-20 relative z-2 mx-auto mb-6 border-2 " +
+                        "px-4 py-1.5 uppercase",
+                      index === 1 ? "border-p3 text-p3" : "border-p1 text-p1",
+                    )}
+                  >
+                    {plan.title}
+                  </div>
+                  <div
+                    className="relative z-2 flex items-center
+                  justify-center"
+                  >
+                    <div
+                      className={clsx(
+                        "h-num flex items-center",
+                        index === 1 ? "text-p3" : "text-p4",
+                      )}
+                    >
+                      $ Amount
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
