@@ -2,6 +2,8 @@ import { Element } from "react-scroll";
 import clsx from "clsx";
 import { useState } from "react";
 import { plans } from "../constans/index.jsx";
+import CountUp from "react-countup";
+import Button from "../components/Button.jsx";
 
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
@@ -120,10 +122,52 @@ const Pricing = () => {
                         index === 1 ? "text-p3" : "text-p4",
                       )}
                     >
-                      $ Amount
+                      ${" "}
+                      <CountUp
+                        start={plan.priceMonthly}
+                        end={monthly ? plan.priceMonthly : plan.priceYearly}
+                        duration={0.4}
+                        useEasing={false}
+                        preserveValue
+                      />
+                    </div>
+                    <div className="small-1 relative top-3 ml-1 uppercase">
+                      /mo
                     </div>
                   </div>
                 </div>
+                <div
+                  className={clsx(
+                    "body-1 relative z-2 mb-10 w-full border-b-s2 pb-9" +
+                      "text-center text-p4",
+                    index === 1 && "border-b",
+                  )}
+                >
+                  {plan.caption}
+                </div>
+                <ul className="mx-auto space-y-4 xl:px-7">
+                  {plan.features.map((feature) => (
+                    <li key={feature} className="relative flex items-center">
+                      <img
+                        src={"/images/check.png"}
+                        alt="check"
+                        className="size-10 object-contain"
+                      />
+                      <p className="flex-1">{feature}</p>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-10 flex w-full justify-center">
+                  <Button icon={plan.icon}>Get Started</Button>
+                </div>
+                {index === 1 && (
+                  <p
+                    className="small-compact mt-9 text-center text-p3
+                  before:content-['-'] after:content-['-'] before:mx-2.5 after:mx-2.5"
+                  >
+                    Limited time offer
+                  </p>
+                )}
               </div>
             ))}
           </div>
