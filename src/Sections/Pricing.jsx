@@ -41,9 +41,8 @@ const Pricing = () => {
               </button>
               <div
                 className={clsx(
-                  "g4 rounded-14 before:h-100 pricing-head_btn_before absolute" +
-                    " left-2 top-2 h-[calc(100%-16px)] w-[calc(50%-8px)] overflow-hidden" +
-                    " shadow-400 transition-transform duration-500",
+                  "g4 rounded-14 before:h-100 pricing-head_btn_before absolute left-2 top-2 h-[calc(100%-16px)] w-[calc(50%-8px)] overflow-hidden shadow-400 transition-transform duration-500",
+
                   !monthly && "translate-x-full",
                 )}
               />
@@ -105,8 +104,7 @@ const Pricing = () => {
                 >
                   <div
                     className={clsx(
-                      "small-2 rounded-20 relative z-2 mx-auto mb-6 border-2 " +
-                        "px-4 py-1.5 uppercase",
+                      "small-2 rounded-20 relative z-2 mx-auto mb-6 border-2 px-4 py-1.5 uppercase",
                       index === 1 ? "border-p3 text-p3" : "border-p1 text-p1",
                     )}
                   >
@@ -138,8 +136,7 @@ const Pricing = () => {
                 </div>
                 <div
                   className={clsx(
-                    "body-1 relative z-2 mb-10 w-full border-b-s2 pb-9" +
-                      "text-center text-p4",
+                    "body-1 relative z-2 mb-10 w-full border-b-s2 pb-9 text-center text-p4",
                     index === 1 && "border-b",
                   )}
                 >
