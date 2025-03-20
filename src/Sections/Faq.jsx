@@ -6,7 +6,7 @@ const Faq = () => {
   const halfLength = Math.floor(faq.length / 2);
   return (
     <section>
-      <Element name="Faq" className="relative">
+      <Element name="faq" className="relative">
         <div className="relative container z-2 py-28">
           <div>
             <h3 className="h3 max-md:h5 max-w-640 max-lg:max-w-md mb-7 text-p4">

@@ -5,7 +5,7 @@ import Button from "../components/Button.jsx";
 const Features = () => {
   return (
     <section>
-      <Element>
+      <Element name="features">
         <div className="container">
           <div
             className="relative flex md:flex-wrap flex-nowrap border-2 border-s3 rounded-xl
